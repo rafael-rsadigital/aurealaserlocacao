@@ -10,7 +10,7 @@
 
 ## Implementar navegação mobile acessível
 - Implementar navegação mobile acessível, com menu funcional por teclado, controles identificáveis, foco visível e atributos ARIA apropriados.
-- Preservar os links existentes de Locação, Ácrus HTM, Laser Day, Cidades, Curso e Blog, além do CTA de WhatsApp.
+- Preservar os links existentes de Locação, Ácrus HTM, Laser Day, Cidades e Blog, além do CTA de WhatsApp.
 
 ## Destacar a oferta principal
 - Destacar visualmente o plano de 8 horas como a opção mais escolhida, sem alterar preços ou demais condições apresentadas.
