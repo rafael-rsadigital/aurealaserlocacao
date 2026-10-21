@@ -63,21 +63,19 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
     <dialog class="promo-dialog" id="promo-dialog" aria-labelledby="promo-title">
       <button class="promo-close" type="button" aria-label="Fechar oferta">×</button>
       <span class="eyebrow">Benefício para clientes da locação</span>
-      <h2 id="promo-title">Seu Laser Day merece uma divulgação à altura.</h2>
-      <p>Conheça as condições especiais para ter uma landing page de depilação a laser e otimizar o Perfil da Empresa no Google da sua clínica.</p>
-      <ul><li>Landing page com contato direto pelo WhatsApp</li><li>Otimização da apresentação da clínica no Google</li></ul>
-      <a class="btn btn-primary promo-cta" href={whatsappUrl('Olá! Soube do benefício de divulgação digital para clientes da locação da Acrus Laser HTM e gostaria de conhecer as condições.')}>Quero conhecer as condições</a>
-      <p class="promo-note">Consulte as condições e a elegibilidade do perfil no Google.</p>
+      <h2 id="promo-title">Quer ganhar uma landing page + otimização do Perfil da Empresa no Google?</h2>
+      <p>Entre em contato e consulte as condições para sua clínica.</p>
+      <a class="btn btn-primary promo-cta" href={whatsappUrl('Olá! Gostaria de consultar as condições do benefício de landing page e otimização do Perfil da Empresa no Google para clientes da locação.')}>Consulte as condições</a>
+      <p class="promo-note">Benefício sujeito a condições e avaliação do perfil no Google.</p>
     </dialog>
     <style>
-      .promo-dialog{width:min(92vw,520px);border:1px solid #8c713b;border-radius:18px;padding:2rem;background:#111;color:#f7f3eb;box-shadow:0 24px 80px #0009}
-      .promo-dialog::backdrop{background:#000a;backdrop-filter:blur(4px)}
-      .promo-dialog h2{font-size:clamp(1.6rem,4vw,2.1rem);line-height:1.15;margin:.7rem 0}
-      .promo-dialog p{color:#d0cbc1;line-height:1.6}
-      .promo-dialog ul{padding-left:1.2rem;line-height:1.8}
-      .promo-close{position:absolute;right:12px;top:8px;border:0;background:transparent;color:#fff;font-size:2rem;cursor:pointer}
-      .promo-cta{display:flex;justify-content:center;text-align:center;margin-top:1.2rem}
-      .promo-note{font-size:.8rem;margin-bottom:0}
+      .promo-dialog{position:relative;width:min(92vw,480px);border:1px solid #c49343;border-radius:14px;padding:2rem;background:#fff;color:#222;box-shadow:0 24px 80px #0004}
+      .promo-dialog::backdrop{background:#0008;backdrop-filter:blur(4px)}
+      .promo-dialog h2{font-size:clamp(1.55rem,4vw,2rem);line-height:1.15;margin:.7rem 0;color:#171717}
+      .promo-dialog p{color:#555;line-height:1.55}
+      .promo-close{position:absolute;right:12px;top:8px;border:0;background:transparent;color:#222;font-size:2rem;cursor:pointer}
+      .promo-cta{display:flex;justify-content:center;text-align:center;margin-top:1rem}
+      .promo-note{font-size:.78rem;margin-bottom:0}
     </style>
     <dialog class="availability-dialog" id="availability-dialog" aria-labelledby="availability-title">
       <div class="availability-dialog__header"><div><span class="eyebrow">Consultar disponibilidade</span><h2 id="availability-title">Conte um pouco sobre sua agenda.</h2></div><button class="dialog-close" type="button" aria-label="Fechar perguntas">×</button></div>
