@@ -9,6 +9,16 @@
       "source": "/acrus-htm-triple-wave.html",
       "destination": "/acrus-htm/",
       "permanent": true
+    },
+    {
+      "source": "/empreender-depilacao-laser",
+      "destination": "/laser-day/",
+      "permanent": true
+    },
+    {
+      "source": "/empreender-depilacao-laser/",
+      "destination": "/laser-day/",
+      "permanent": true
     }
   ]
 }
