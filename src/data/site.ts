@@ -5,7 +5,7 @@ export const site = {
   whatsapp: '5512982906130',
   region: 'Baixada Santista',
   logo: '/images/logo-aurea-premium.png',
-  equipmentImage: '/images/acrus-htm.png',
+  equipmentImage: '/images/acrus-htm-transparent.png',
   promotion: {
     title: 'Condição especial por tempo limitado',
     plans: [
