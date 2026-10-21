@@ -4,7 +4,6 @@
     { "path": "/locacao-laser/", "title": "Locação de Laser" },
     { "path": "/acrus-htm/", "title": "Ácrus HTM" },
     { "path": "/laser-day/", "title": "Laser Day" },
-    { "path": "/empreender-depilacao-laser/", "title": "Curso de Depilação a Laser" },
     { "path": "/cidades/", "title": "Cidades atendidas" },
     { "path": "/cidades/:slug/", "title": "Locação por cidade" },
     { "path": "/blog/", "title": "Blog" },
