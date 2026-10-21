@@ -81,3 +81,26 @@ main section[style*="background"] p{color:#626262!important}
 main section[style*="background"] .card{background:#fff;border-color:#e1ddd5}
 @media(max-width:800px){.site-nav{background:#050505;border-color:#252525}}
 @media(max-width:560px){.price-card.featured{transform:none}}
+
+
+/* Correções de contraste e responsividade após a mudança para o tema claro */
+.btn-ghost{color:#222;border-color:#b8b2a7;background:rgba(255,255,255,.55)}
+.btn-ghost:hover{color:#171717;border-color:#94631d;background:#fff}
+.hero{background:radial-gradient(ellipse at 78% 12%,#eee2cc 0%,#f7f6f2 48%,#f7f6f2 100%)!important}
+.site-header{box-shadow:0 5px 18px #00000012;border-bottom:1px solid #c4934355}
+.wavelength-section{background:#f7f6f2!important;color:#222}
+.wavelength-section h2{color:#171717}
+.wavelength-section p{color:#626262}
+.wavelength-section .btn-ghost{color:#222;border-color:#b8b2a7;background:#fff}
+.wavelength-section .btn-ghost:hover{color:#171717;border-color:#94631d;background:#fff}
+@media(max-width:800px){
+  .wavelength-section .container{grid-template-columns:minmax(0,1fr)!important;gap:2rem!important}
+  .wavelength-section .grid.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .wavelength-section .card{min-width:0;padding:1rem .65rem;overflow-wrap:anywhere}
+}
+@media(max-width:560px){
+  .wavelength-section .grid.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .wavelength-section .card{padding:.85rem .5rem;text-align:center}
+  .wavelength-section .card b{font-size:.92rem}
+  .wavelength-section .card p{font-size:.82rem}
+}
