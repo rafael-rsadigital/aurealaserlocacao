@@ -104,3 +104,14 @@ main section[style*="background"] .card{background:#fff;border-color:#e1ddd5}
   .wavelength-section .card b{font-size:.92rem}
   .wavelength-section .card p{font-size:.82rem}
 }
+
+/* Contraste editorial sobre o tema claro atual */
+:root{--surface-white:#fff;--surface-cream:#f5eee2;--surface-sand:#eee3d3;--surface-slate:#edf1f5;--surface-lavender:#f1eff6;--surface-gold:#fbf6ec}
+.eyebrow{display:inline-flex;align-items:center;gap:.65rem;margin-bottom:1rem;color:#9a6b24;font-size:.72rem;font-weight:700;letter-spacing:.16em;line-height:1.2;text-transform:uppercase}.eyebrow::before{content:'';width:1.75rem;height:1px;background:#c49343;box-shadow:0 0 10px #c4934344}
+h1 em,h2 em,h3 em,.highlight{color:#9b6b20;font-style:normal;font-weight:700}h1 em,h2 em{display:inline-block;position:relative}h1 em::after,h2 em::after{content:'';display:block;width:2.4rem;height:2px;background:#c49343;margin-top:.35rem;border-radius:2px}p strong,p b,.card b{color:#8d5f1f;font-weight:700}.section{background:var(--surface-white)}
+main section.section[style*="background:#0a0a0a"]{background:linear-gradient(135deg,var(--surface-slate),#f8fafb)!important}main section.section[style*="background:#080808"]{background:linear-gradient(135deg,var(--surface-lavender),#fff)!important}main section.section[style*="background:var(--ink)"]{background:linear-gradient(135deg,var(--surface-cream),#fff)!important}
+main section.section:has(.pricing-grid){background:linear-gradient(135deg,var(--surface-gold),#fff)!important}main section.section:has(.numbers){background:linear-gradient(135deg,var(--surface-slate),#fff)!important}main section.section:has(.faq){background:linear-gradient(135deg,var(--surface-lavender),#fff)!important}main section.section:has(.equipment-intro),main section.section:has(.city-intro){background:linear-gradient(135deg,var(--surface-cream),#fff)!important}
+main section.metrics-strip{background:linear-gradient(90deg,#17130d,#2a2115)!important;border-top:1px solid #a77a32;border-bottom:1px solid #3f321f;color:#fff}main section.metrics-strip b{color:#f1ca7b}main section.metrics-strip small{color:#ddd3c3!important}
+main section.section:has(.numbers) .card{background:#fff;border-color:#d9e0e6}main section.section:has(.faq) .faq details{background:rgba(255,255,255,.58);border-bottom-color:#d8d5df}main section.section:has(.pricing-grid) .price-card{background:rgba(255,255,255,.8)}
+.pricing-section{border-top:1px solid #ead8b7}.pricing-section .eyebrow,.cta-section .eyebrow{color:#9a6b24}.cta-section{background:linear-gradient(120deg,#f0e5d2,#fff)!important}
+@media(max-width:560px){h1 em::after,h2 em::after{width:1.8rem}.eyebrow{letter-spacing:.12em}}
