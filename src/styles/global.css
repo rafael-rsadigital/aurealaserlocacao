@@ -36,3 +36,48 @@ p{color:var(--muted);font-size:1rem}
 @media(max-width:800px){.hero{min-height:auto;padding:3.5rem 0}.hero-grid{grid-template-columns:1fr}.hero-image{max-width:520px;margin:auto}.cards-3,.cards-4{grid-template-columns:1fr 1fr}.container{width:min(100% - 28px,1160px)}.menu-toggle{display:inline-flex}.site-nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;background:#050505;border:1px solid var(--line);border-top:0;padding:.75rem}.site-nav.is-open{display:block}.site-nav-list{display:flex;flex-direction:column;align-items:stretch;gap:.15rem}.site-nav-list li{display:block}.site-nav-list a:not(.btn){display:block;padding:.8rem .7rem;font-size:.92rem}.site-nav-list .nav-cta{display:flex!important;width:100%;margin-top:.45rem}.equipment-intro,.city-intro{grid-template-columns:1fr;gap:2rem}.equipment-intro .card,.city-intro .city-image{order:2}.equipment-intro>div:first-child,.city-intro>div:first-child{order:1}.price-card.featured{transform:none}.cta-inner{align-items:flex-start}}
 @media(max-width:560px){.cards-3,.cards-4{grid-template-columns:1fr}.btn{width:100%}.hero{padding:2.75rem 0 3.5rem}.hero h1{font-size:clamp(2.7rem,15vw,4rem)}.hero-image{padding:.75rem}.section + .section::before{width:calc(100% - 28px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+
+/* Tema claro: preto preservado na navegação e no rodapé */
+:root{--ink:#f7f6f2;--ink-soft:#fff;--muted:#626262;--muted-light:#555;--paper:#fff;--line:#dedbd4;--line-soft:#e8e5df;--gold:#c49343;--gold-light:#a9782c}
+body{color:#222;background:#f7f6f2}
+h1,h2,h3{color:#171717}
+p{color:#626262}
+.site-header{background:rgba(5,5,5,.97);border-bottom-color:#222}
+.site-nav-list a:not(.btn){color:#e7e2d9}
+.menu-toggle{color:#f5f2eb;border-color:#3a3a3a}
+.breadcrumb{color:#626262}.breadcrumb a{color:#555}.breadcrumb span:last-child{color:#222}
+.btn-primary{background:#c49343;color:#080808}.btn-primary:hover{background:#e0b568;color:#080808}
+.section + .section::before{background:linear-gradient(90deg,transparent,#c49343,transparent);opacity:.22}
+.card,.price-card{background:#fff;border-color:#e1ddd5;box-shadow:0 8px 24px #17171708}
+.card:hover{border-color:#c9a15e;background:#fff}
+.card p,.price-card p{color:#626262}
+.price-card.featured{background:linear-gradient(160deg,#fffdf8,#fff);border-color:#c49343;box-shadow:0 12px 30px #8f6a2914;transform:translateY(-.5rem)}
+.price-now{color:#94631d}
+.hero{background:radial-gradient(circle at 80% 20%,#f0e6d3 0%,#faf9f6 48%,#f7f6f2 100%)}
+.hero-image,.equipment-intro .card,.city-intro .city-image{background:radial-gradient(circle at 50% 45%,#4b3921 0%,#211b12 48%,#111 78%);border-color:#c7a66b}
+.equipment-intro .card{box-shadow:0 12px 30px #17171712}
+.site-footer{background:#080808;color:#f1eee7;border-top-color:#252525}
+.site-footer p{color:#bdb8ae}.site-footer .footer-title{color:#fff!important}
+.cta-section{background:linear-gradient(120deg,#f0e7d7,#faf9f6);border-top-color:#c49343;border-bottom-color:#e0d3bd}
+.cta-section p{color:#555}.cta-section h2{color:#171717}
+.faq details{background:transparent;border-bottom-color:#dedbd4}
+.faq summary{color:#222}
+.availability-dialog{background:#fff;color:#222;border-color:#c49343}
+.availability-dialog h2{color:#171717}.availability-dialog>p{color:#626262}
+.availability-dialog label{color:#333}
+.availability-dialog select{background:#fff;color:#222;border-color:#d4d0c7}
+.dialog-close{color:#222;border-color:#ddd}
+.promo-dialog{background:#fff;color:#222;border-color:#c49343}
+.promo-dialog h2{color:#171717}
+.promo-dialog p{color:#555}
+.promo-dialog ul{color:#333}
+.promo-close{color:#222}
+.promo-note{color:#666!important}
+/* Seções que antes tinham fundo escuro passam a usar a base clara. */
+main section[style*="background"]{background:#f7f6f2!important;color:#222!important}
+main section[style*="background"] h1,main section[style*="background"] h2,main section[style*="background"] h3{color:#171717!important}
+main section[style*="background"] p{color:#626262!important}
+main section[style*="background"] .card{background:#fff;border-color:#e1ddd5}
+@media(max-width:800px){.site-nav{background:#050505;border-color:#252525}}
+@media(max-width:560px){.price-card.featured{transform:none}}
