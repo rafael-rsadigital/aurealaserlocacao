@@ -1,14 +1,14 @@
 ---
 import { site, whatsappUrl } from '../data/site';
 const { city } = Astro.props;
-const message = `Olá! Gostaria de consultar as condições de locação do Ácrus HTM${city ? ` em ${city}` : ''} para minha clínica.`;
+const message = `Olá! Gostaria de consultar as condições promocionais da primeira locação do Ácrus HTM${city ? ` em ${city}` : ''} para minha clínica.`;
 ---
 <section class="section pricing-section">
   <div class="container">
-    <span class="eyebrow">Locação sob consulta</span>
-    <h2>Vamos encontrar a melhor opção para sua clínica?</h2>
-    <p class="pricing-lead">Consulte a disponibilidade do equipamento, informe a data e o período desejados e receba as condições diretamente pelo WhatsApp.</p>
+    <span class="eyebrow">Condição especial de primeira locação</span>
+    <h2>Locação do Ácrus HTM a partir de R$ 500</h2>
+    <p class="pricing-lead">Período de 6 horas, com condição promocional para a primeira locação da sua clínica.</p>
     <a class="btn btn-primary" href={whatsappUrl(message)}>Consultar condições pelo WhatsApp</a>
-    <p class="pricing-note">Valores e logística informados conforme período, localização e disponibilidade.</p>
+    <p class="pricing-note">Valor promocional sujeito à disponibilidade, localização e condições da locação. Consulte pelo WhatsApp.</p>
   </div>
 </section>
