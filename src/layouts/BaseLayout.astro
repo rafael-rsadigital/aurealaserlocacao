@@ -36,6 +36,12 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
         </nav>
       </div>
     </header>
+    <aside class="announcement-bar" aria-label="Condição especial para clientes da locação">
+      <div class="container announcement-bar__inner">
+        <p><strong>Landing Page Otimizada Grátis + Otimização do Google Meu Negócio</strong><span> para fazer o seu Laser Day ser um sucesso!</span></p>
+        <a href={whatsappUrl('Olá! Gostaria de consultar as condições da Landing Page Otimizada Grátis e da Otimização do Google Meu Negócio para fazer meu Laser Day ser um sucesso.')}>Consulte condições</a>
+      </div>
+    </aside>
     <main>
       {breadcrumbs.length > 0 && <div class="container breadcrumb" aria-label="Breadcrumb"><a href="/">Início</a>{breadcrumbs.map((item)=><><span aria-hidden="true"> / </span>{item.href ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}</>)}</div>}
       <slot />
@@ -59,55 +65,36 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
       </div>
     </footer>
     <a href={whatsappUrl()} aria-label="Consultar disponibilidade pelo WhatsApp" class="whatsapp-float"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.08 0C5.56 0 .25 5.3.25 11.82c0 2.08.54 4.1 1.57 5.88L.15 24l6.45-1.64a11.8 11.8 0 0 0 5.48 1.35h.01c6.52 0 11.82-5.3 11.82-11.82 0-3.16-1.23-6.13-3.41-8.39ZM12.1 21.7h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.83.98 1.02-3.74-.23-.38a9.83 9.83 0 1 1 8.42 4.72Zm5.4-7.38c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35Z" /></svg><span>WhatsApp</span></a>
-    <dialog class="promo-dialog" id="promo-dialog" aria-labelledby="promo-title">
-      <button class="promo-close" type="button" aria-label="Fechar oferta">×</button>
-      <span class="eyebrow">Benefício para clientes da locação</span>
-      <h2 id="promo-title">Quer ganhar uma landing page + otimização do Perfil da Empresa no Google?</h2>
-      <p>Entre em contato e consulte as condições para sua clínica.</p>
-      <a class="btn btn-primary promo-cta" href={whatsappUrl('Olá! Gostaria de consultar as condições do benefício de landing page e otimização do Perfil da Empresa no Google para clientes da locação.')}>Consulte as condições</a>
-      <p class="promo-note">Benefício sujeito a condições e avaliação do perfil no Google.</p>
-    </dialog>
-    <style>
-      .promo-dialog{position:relative;width:min(92vw,480px);border:1px solid #c49343;border-radius:14px;padding:2rem;background:#fff;color:#222;box-shadow:0 24px 80px #0004}
-      .promo-dialog::backdrop{background:#0008;backdrop-filter:blur(4px)}
-      .promo-dialog h2{font-size:clamp(1.55rem,4vw,2rem);line-height:1.15;margin:.7rem 0;color:#171717}
-      .promo-dialog p{color:#555;line-height:1.55}
-      .promo-close{position:absolute;right:12px;top:8px;border:0;background:transparent;color:#222;font-size:2rem;cursor:pointer}
-      .promo-cta{display:flex;justify-content:center;text-align:center;margin-top:1rem}
-      .promo-note{font-size:.78rem;margin-bottom:0}
-    </style>
     <dialog class="availability-dialog" id="availability-dialog" aria-labelledby="availability-title">
       <div class="availability-dialog__header"><div><span class="eyebrow">Consultar disponibilidade</span><h2 id="availability-title">Conte um pouco sobre sua agenda.</h2></div><button class="dialog-close" type="button" aria-label="Fechar perguntas">×</button></div>
       <p>Assim conseguimos direcionar sua consulta com mais rapidez.</p>
       <form id="availability-form">
         <label for="availability-city">Qual é a cidade?</label>
-        <select id="availability-city" name="city" required><option value="" disabled selected>Selecione sua cidade</option>{site.cities.map((city)=><option value={city.name}>{city.name}</option>)}</select>
+        <select id="availability-city" name="city" required><option value="" disabled selected>Selecione sua cidade</option>{site.cities.map((city)=><option value={city.name}>{city.name}</option>)}<option value="Outro">Outro</option></select>
+        <input id="availability-city-other" name="cityOther" type="text" placeholder="Digite sua cidade" autocomplete="address-level2" hidden />
         <label for="availability-period">Qual é o período desejado?</label>
-        <select id="availability-period" name="period" required><option value="" disabled selected>Selecione o período</option><option value="6 horas">6 horas</option><option value="8 horas">8 horas</option><option value="12 horas">12 horas</option></select>
+        <select id="availability-period" name="period" required><option value="" disabled selected>Selecione o período</option><option value="6 horas">6 horas</option><option value="8 horas">8 horas</option><option value="12 horas">12 horas</option><option value="Ainda não decidi">Ainda não decidi</option></select>
+        <label for="availability-laser-day">Já trabalha com Laser Day na sua clínica?</label>
+        <select id="availability-laser-day" name="laserDay" required><option value="" disabled selected>Selecione uma opção</option><option value="Sim">Sim</option><option value="Não">Não</option></select>
         <button class="btn btn-primary" type="submit">Continuar para o WhatsApp</button>
       </form>
     </dialog>
     <script define:vars={{ whatsappNumber: site.whatsapp }}>
       const menuToggle = document.querySelector('.menu-toggle');
       const siteNav = document.querySelector('#site-nav');
-      const promoDialog = document.querySelector('#promo-dialog');
-      const promoClosedKey = 'aurea-promo-dismissed';
-      if (promoDialog instanceof HTMLDialogElement && !sessionStorage.getItem(promoClosedKey)) {
-        window.setTimeout(() => {
-          if (!sessionStorage.getItem(promoClosedKey) && !document.querySelector('dialog[open]')) promoDialog.showModal();
-        }, 6500);
-      }
-      const closePromo = () => {
-        if (promoDialog instanceof HTMLDialogElement) promoDialog.close();
-        sessionStorage.setItem(promoClosedKey, '1');
-      };
-      document.querySelector('.promo-close')?.addEventListener('click', closePromo);
-      promoDialog?.addEventListener('click', (event) => {
-        if (event.target === promoDialog) closePromo();
-      });
-      promoDialog?.querySelector('.promo-cta')?.addEventListener('click', () => sessionStorage.setItem(promoClosedKey, '1'));
       const availabilityDialog = document.querySelector('#availability-dialog');
       const availabilityForm = document.querySelector('#availability-form');
+      const availabilityCity = availabilityForm?.querySelector('#availability-city');
+      const availabilityCityOther = availabilityForm?.querySelector('#availability-city-other');
+      availabilityCity?.addEventListener('change', () => {
+        const isOther = availabilityCity.value === 'Outro';
+        if (availabilityCityOther instanceof HTMLInputElement) {
+          availabilityCityOther.hidden = !isOther;
+          availabilityCityOther.required = isOther;
+          if (!isOther) availabilityCityOther.value = '';
+          if (isOther) availabilityCityOther.focus();
+        }
+      });
       const openAvailabilityDialog = (event) => {
         event.preventDefault();
         if (availabilityDialog instanceof HTMLDialogElement) availabilityDialog.showModal();
@@ -121,10 +108,13 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
       });
       availabilityForm?.addEventListener('submit', (event) => {
         event.preventDefault();
-        const city = availabilityForm.querySelector('#availability-city')?.value;
+        const selectedCity = availabilityForm.querySelector('#availability-city')?.value;
+        const otherCity = availabilityForm.querySelector('#availability-city-other')?.value?.trim();
+        const city = selectedCity === 'Outro' ? otherCity : selectedCity;
         const period = availabilityForm.querySelector('#availability-period')?.value;
-        if (!city || !period) return;
-        const message = `Olá! Gostaria de consultar a disponibilidade do Ácrus HTM para minha clínica em ${city}, no período de ${period}.`;
+        const laserDay = availabilityForm.querySelector('#availability-laser-day')?.value;
+        if (!city || !period || !laserDay) return;
+        const message = `Olá! Gostaria de consultar a disponibilidade do Ácrus HTM para minha clínica em ${city}, no período de ${period}. Já trabalho com Laser Day na minha clínica: ${laserDay}.`;
         window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
       });
       const closeMenu = () => {
