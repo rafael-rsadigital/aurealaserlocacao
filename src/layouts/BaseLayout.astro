@@ -37,9 +37,11 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
       </div>
     </header>
     <aside class="announcement-bar" aria-label="Condição especial para clientes da locação">
-      <div class="container announcement-bar__inner">
-        <p><strong>Landing Page Otimizada Grátis + Otimização do Google Meu Negócio</strong><span> para fazer o seu Laser Day ser um sucesso!</span></p>
-        <a href={whatsappUrl('Olá! Gostaria de consultar as condições da Landing Page Otimizada Grátis e da Otimização do Google Meu Negócio para fazer meu Laser Day ser um sucesso.')}>Consulte condições</a>
+      <div class="announcement-bar__viewport">
+        <div class="announcement-bar__track">
+          <p><strong>Landing Page Otimizada Grátis + Otimização do Google Meu Negócio</strong><span> para fazer o seu Laser Day ser um sucesso! - Consulte condições</span></p>
+          <p aria-hidden="true"><strong>Landing Page Otimizada Grátis + Otimização do Google Meu Negócio</strong><span> para fazer o seu Laser Day ser um sucesso! - Consulte condições</span></p>
+        </div>
       </div>
     </aside>
     <main>

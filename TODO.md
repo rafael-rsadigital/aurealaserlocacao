@@ -11,3 +11,8 @@
 - Na pergunta de cidade, oferecer a opção “Outro” e, quando selecionada, exibir um campo obrigatório para digitar a cidade.
 - Na pergunta de período desejado, oferecer também a alternativa “Ainda não decidi”.
 - Incluir a pergunta “Já trabalha com Laser Day na sua clínica?” com respostas obrigatórias “Sim” e “Não”, enviando todas as respostas na mensagem do WhatsApp.
+
+## Ajustar o letreiro promocional
+- Exibir a mensagem promocional como letreiro rolante contínuo para a esquerda, logo abaixo da barra de menu, repetindo o conteúdo para manter o fluxo visual.
+- Manter “Consulte condições” somente como texto informativo, sem botão ou link próprio.
+- Aumentar a fonte do letreiro em aproximadamente 5% e preservar a leitura responsiva.
