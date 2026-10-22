@@ -16,3 +16,8 @@
 - Exibir a mensagem promocional como letreiro rolante contínuo para a esquerda, logo abaixo da barra de menu, repetindo o conteúdo para manter o fluxo visual.
 - Manter “Consulte condições” somente como texto informativo, sem botão ou link próprio.
 - Aumentar a fonte do letreiro em aproximadamente 5% e preservar a leitura responsiva.
+
+## Fixar e atualizar a chamada do letreiro
+- Manter o letreiro congelado logo abaixo da barra de menu durante a rolagem da página, assim como o menu.
+- Usar como primeira frase, em caixa alta: “GRÁTIS: LANDING PAGE OTIMIZADA + OTIMIZAÇÃO DE GOOGLE MEU NEGÓCIO...”.
+- Manter o restante do texto: “para fazer o seu Laser Day ser um sucesso! - Consulte condições”.
