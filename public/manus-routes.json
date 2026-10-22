@@ -4,7 +4,7 @@
     { "path": "/locacao-laser/", "title": "Locação de Laser" },
     { "path": "/acrus-htm/", "title": "Ácrus HTM" },
     { "path": "/laser-day/", "title": "Laser Day" },
-    { "path": "/bonus-digital/", "title": "Bônus digital" },
+    { "path": "/bonus-locacao/", "title": "Bônus de locação" },
     { "path": "/cidades/", "title": "Cidades atendidas" },
     { "path": "/cidades/:slug/", "title": "Locação por cidade" },
     { "path": "/blog/", "title": "Blog" },

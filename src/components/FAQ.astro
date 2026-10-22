@@ -1,4 +1,8 @@
 ---
 const { items } = Astro.props;
+const bonusMarker = 'Saiba mais em /bonus-locacao/.';
 ---
-<div class="faq">{items.map((item:{q:string,a:string})=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div>
+<div class="faq">{items.map((item:{q:string,a:string})=>{
+  const parts = item.a.split(bonusMarker);
+  return <details><summary>{item.q}</summary><p>{parts[0]}{parts.length > 1 && <><a class="faq-link" href="/bonus-locacao/">Conheça o bônus digital</a>.{parts.slice(1).join(bonusMarker)}</>}</p></details>;
+})}</div>

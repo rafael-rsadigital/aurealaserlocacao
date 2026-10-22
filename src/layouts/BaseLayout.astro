@@ -56,7 +56,7 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
         </div>
         <div>
           <p class="footer-title">Explorar</p>
-          <p class="footer-links"><a href="/locacao-laser/">Locação de Laser</a><br /><a href="/acrus-htm/">Ácrus HTM</a><br /><a href="/laser-day/">Laser Day</a><br /><a href="/bonus-digital/">Bônus digital</a><br /><a href="/cidades/">Cidades atendidas</a></p>
+          <p class="footer-links"><a href="/locacao-laser/">Locação de Laser</a><br /><a href="/acrus-htm/">Ácrus HTM</a><br /><a href="/laser-day/">Laser Day</a><br /><a href="/bonus-locacao/">Bônus digital</a><br /><a href="/cidades/">Cidades atendidas</a></p>
         </div>
         <div>
           <p class="footer-title">Fale com a Áurea</p>
@@ -75,7 +75,7 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
         <select id="availability-city" name="city" required><option value="" disabled selected>Selecione sua cidade</option>{site.cities.map((city)=><option value={city.name}>{city.name}</option>)}<option value="Outro">Outro</option></select>
         <input id="availability-city-other" name="cityOther" type="text" placeholder="Digite sua cidade" autocomplete="address-level2" hidden />
         <label for="availability-period">Qual é o período desejado?</label>
-        <select id="availability-period" name="period" required><option value="" disabled selected>Selecione o período</option><option value="6 horas">6 horas</option><option value="8 horas">8 horas</option><option value="12 horas">12 horas</option><option value="Ainda não decidi">Ainda não decidi</option></select>
+        <select id="availability-period" name="period" required><option value="" disabled selected>Selecione o período</option><option value="6 horas">6 horas</option><option value="9 horas">9 horas</option><option value="12 horas">12 horas</option><option value="Ainda não decidi">Ainda não decidi</option></select>
         <label for="availability-laser-day">Já trabalha com Laser Day na sua clínica?</label>
         <select id="availability-laser-day" name="laserDay" required><option value="" disabled selected>Selecione uma opção</option><option value="Sim">Sim</option><option value="Não">Não</option></select>
         <button class="btn btn-primary" type="submit">Continuar para o WhatsApp</button>
