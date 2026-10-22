@@ -21,3 +21,9 @@
 - Manter o letreiro congelado logo abaixo da barra de menu durante a rolagem da página, assim como o menu.
 - Usar como primeira frase, em caixa alta: “GRÁTIS: LANDING PAGE OTIMIZADA + OTIMIZAÇÃO DE GOOGLE MEU NEGÓCIO...”.
 - Manter o restante do texto: “para fazer o seu Laser Day ser um sucesso! - Consulte condições”.
+
+## Criar página dedicada do bônus digital
+- Atualizar o letreiro para: “🔥 BÔNUS EXCLUSIVO: Ganhe Site One-Page + Google Meu Negócio nas locações recorrentes! - consulte condições”.
+- Criar a rota pública `/bonus-digital/` com hero, diferencial Triple Wave, dois cards de bônus, condições de parceria, planos de 6h/8h/12h, FAQ e CTA para WhatsApp.
+- Informar que o bônus é condicionado a 6 meses de parceria, com frequência mínima de 1 locação por mês, incluindo a nota sobre taxa administrativa de desativação digital.
+- Acrescentar a pergunta sobre o bônus aos FAQs da home, locação, Ácrus HTM, Laser Day e páginas de cidade.
