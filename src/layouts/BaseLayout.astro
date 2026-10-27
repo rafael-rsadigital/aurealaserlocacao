@@ -61,6 +61,7 @@ const { title, description, schema, breadcrumbs=[] } = Astro.props;
         <div>
           <p class="footer-title">Fale com a Áurea</p>
           <p>Consulte disponibilidade, datas, vagas e condições para a sua clínica.</p>
+          <p><a href={`tel:+${site.whatsapp}`} aria-label={`Ligar para ${site.name}`}>{site.phoneDisplay}</a></p>
           <a class="btn btn-primary" href={whatsappUrl()}>Falar no WhatsApp</a>
           {site.socialLinks.map((social)=><p class="footer-social"><a href={social.url} target="_blank" rel="me noopener noreferrer">{social.label}</a></p>)}
         </div>
